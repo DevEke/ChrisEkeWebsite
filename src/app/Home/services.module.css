@@ -1,0 +1,29 @@
+.servicesGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--s-11);
+}
+
+.servicesContentGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--s-9);
+}
+
+.servicesGridItem {
+    display: flex;
+    flex-direction: row;
+    gap: var(--s-7);
+}
+
+@media (max-width: 1240px) {
+    .servicesGrid {
+        gap: var(--s-9);
+    }
+}
+
+@media (max-width: 768px) {
+    .servicesGrid {
+        grid-template-columns: 1fr;
+    }
+}

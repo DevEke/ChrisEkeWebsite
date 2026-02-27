@@ -1,0 +1,70 @@
+.credibilityGrid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-11);
+}
+
+.credibilityContentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--s-11);
+}
+
+.credibilityGridItem {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-7);
+}
+
+
+  .credibilityGridItemContent {
+    h3 {
+      width: 70%;
+    }
+    p {
+      width: 65%;
+    }
+  }
+
+@media (max-width: 1240px) {
+    .credibilityGrid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .credibilityContentGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--s-9);
+    }
+
+    .credibilityGridItem {
+        flex-direction: row;
+    }
+
+    .credibilityGridItemContent {
+        h3 {
+          width: 85%;
+        }
+        p {
+          width: 80%;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .credibilityGrid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .credibilityGridItemContent {
+        h3 {
+          width: 85%;
+        }
+        p {
+          width: 100%;
+        }
+    }
+}

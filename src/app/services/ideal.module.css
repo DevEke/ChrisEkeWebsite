@@ -1,0 +1,29 @@
+.idealGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--s-11);
+}
+
+.idealContentGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--s-9);
+}
+
+.idealGridItem {
+    display: flex;
+    flex-direction: row;
+    gap: var(--s-7);
+}
+
+@media (max-width: 1240px) {
+    .idealGrid {
+        gap: var(--s-9);
+    }
+}
+
+@media (max-width: 768px) {
+    .idealGrid {
+        grid-template-columns: 1fr;
+    }
+}
