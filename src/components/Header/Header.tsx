@@ -49,11 +49,7 @@ export default function Header() {
                 <Link href="#faqs" className={styles.navLink}>FAQ</Link>
             </nav>
             <Button
-                Icon={IconMessageCircleFilled}
                 label="Start a Project"
-                buttonType="primary"
-                link={true}
-                route="#contact"
                 className={styles.headerButton}
             />
             {/* Mobile Button */}

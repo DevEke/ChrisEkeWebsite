@@ -2,8 +2,6 @@
 import type { Metadata } from "next";
 import { Walter_Turncoat, Swanky_and_Moo_Moo } from "next/font/google";
 import "./globals.css";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer"
 import Template from "./template";
 
 const hFont = Walter_Turncoat({
@@ -31,11 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${hFont.variable} ${pFont.variable}`} suppressHydrationWarning>
-        {/* <Header /> */}
         <Template>
             {children}
         </Template>
-        {/* <Footer /> */}
       </body>
     </html>
   );
