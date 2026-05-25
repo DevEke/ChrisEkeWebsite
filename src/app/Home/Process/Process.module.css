@@ -1,0 +1,63 @@
+.processWrapper {
+    padding-block: 90px;
+}
+
+
+
+.processGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin: 48px 0;
+}
+
+.processFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.processFlex:hover .processNumber {
+    color: var(--brand);
+}
+
+
+.processNumber {
+    font-family: var(--font);
+    color: var(--muted-accent);
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 80%;
+    font-size: 48px;
+    width: 54px;
+    flex-shrink: 0;
+    transition: color .2s ease;
+}
+
+/* Small tablets / large phones */
+@media (min-width: 640px) {
+    .processFlex {
+        flex-direction: row;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .processFlex {
+        gap: 24px;
+    }
+}
+
+/* Small laptops / large tablets */
+@media (min-width: 1024px) { }
+
+/* Desktops */
+@media (min-width: 1280px) {
+    .processGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 56px 90px;
+    }
+}
+
+/* Large desktops */
+@media (min-width: 1536px) { }

@@ -1,7 +1,9 @@
 
 import type { FieldError, FieldValues, Path, UseFormRegister } from "react-hook-form";
 import { IconAlertCircle, IconChevronDown } from "@tabler/icons-react";
+import err from "../../../public/inp-err.png";
 import styles from "./Input.module.css";
+import Image from "next/image";
 
 type SelectOptions = {
     value: string;
@@ -14,7 +16,6 @@ type InputProps<TFieldValues extends FieldValues> = {
     label: string;
     className?: string;
     options?: SelectOptions[];
-    style?: React.CSSProperties;
     id: Path<TFieldValues>;
     tabIndex?: number;
     placeholder?: string;
@@ -25,26 +26,26 @@ type InputProps<TFieldValues extends FieldValues> = {
 }
 
 export default function Input<TFieldValues extends FieldValues>({
-    type, label, className, style, id, tabIndex, placeholder, autoComplete, register, inputMode, options, error
+    type, label, className, id, tabIndex, placeholder, autoComplete, register, inputMode, options, error
 }: InputProps<TFieldValues>) {
 
     if (type === "textarea") {
         return (
-            <div className={`${styles.formInputContainer} ${className}`} style={{marginBlock: "48px"}}>
+            <div className={`${styles.formInputContainer} ${className}`}>
                 <label className={styles.formLabel} htmlFor={id}>{label}</label>
                 <textarea
                     className={`${styles.formTextArea} ${error && styles.inputError}`}
                     id={id}
-                    placeholder={placeholder}
-                    rows={3}
+                    rows={5}
                     {...register(id)}
                 />
                 {
                     error && (
-                        <div className={styles.inputErrorContainer} role="alert">
-                            <IconAlertCircle size={15} />
-                            <span>{error.message}</span>
-                        </div>
+                        // <div className={styles.inputErrorContainer} role="alert">
+                        //     <IconAlertCircle stroke={2.5} size={15} />
+                        //     <span>{error.message}</span>
+                        // </div>
+                        <Image src={err} className={styles.errImage} alt="" />
                     )
                 }
             </div>
@@ -71,10 +72,11 @@ export default function Input<TFieldValues extends FieldValues>({
                 <IconChevronDown  size={15} className={styles.selectChevron}/>
                 {
                     error && (
-                        <div className={styles.inputErrorContainer} role="alert">
-                            <IconAlertCircle size={15} />
-                            <span>{error.message}</span>
-                        </div>
+                        // <div className={styles.inputErrorContainer} role="alert">
+                        //     <IconAlertCircle stroke={2.5} size={15} />
+                        //     <span>{error.message}</span>
+                        // </div>
+                        <Image src={err} className={styles.errImage} alt="" />
                     )
                 }
             </div>
@@ -89,7 +91,6 @@ export default function Input<TFieldValues extends FieldValues>({
                 className={`${styles.formInput} ${error && styles.inputError}`}
                 type={type}
                 id={id}
-                placeholder={placeholder}
                 autoComplete={autoComplete}
                 inputMode={inputMode}
                 {...register(id)}
@@ -97,10 +98,11 @@ export default function Input<TFieldValues extends FieldValues>({
             />
             {
                 error && (
-                    <div className={styles.inputErrorContainer} role="alert">
-                        <IconAlertCircle size={15} />
-                        <span>{error.message}</span>
-                    </div>
+                    // <div className={styles.inputErrorContainer} role="alert">
+                    //     <IconAlertCircle  stroke={2.5} size={15} />
+                    //     <span>{error.message}</span>
+                    // </div>
+                    <Image src={err} className={styles.errImage} alt="" />
                 )
             }
         </div>

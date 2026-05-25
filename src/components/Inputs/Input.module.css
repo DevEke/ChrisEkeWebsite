@@ -2,7 +2,11 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    background-repeat: no-repeat;
 }
+
+
+
 
 .formLabel {
     position: absolute;
@@ -19,12 +23,13 @@
 .formSelect,
 .formTextArea
  {
-    padding: var(--s-4) var(--s-5);
-    font-size: var(--s-5);
+    padding: 30px 18px 0px 18px;
+    font-family: var(--p-font);
+    color: var(--muted);
+    height: 100%;
+    font-size: 18px;
     background: none;
     border: none;
-    border-bottom: 1px solid var(--accent);
-    color: var(--body);
     cursor: pointer;
     transition:
         background .2s ease,
@@ -37,9 +42,12 @@
 .formInput:focus,
 .formSelect:focus,
 .formTextArea:focus {
-    background: var(--accent);
-    border-bottom: 1px solid var(--body);
     outline: transparent;
+}
+
+.formInput::placeholder,
+.formTextArea::placeholder {
+    color: var(--muted)
 }
 
 
@@ -50,27 +58,26 @@
     padding-right: var(--s-7);
 }
 
-.selectChevron {
-    position: absolute;
-    top: var(--s-5);
-    right: var(--s-5);
-    color: var(--body);
-}
 
 .formTextArea {
+    padding: 34px 18px 0px 18px;
     resize: none;
 }
 
 .inputErrorContainer {
     position: absolute;
     color: var(--error);
-    font-size: var(--s-4);
     display: flex;
-    gap: var(--s-2);
+    gap: 6px;
     align-items: center;
-    bottom: -21px;
+    bottom: -24px;
+    font-family: var(--p-font);
+    font-weight: 500;
+    font-size: 15px;
+    right: 0;
 }
 
-.inputError {
-    border-bottom: 1px solid var(--error);
+.errImage {
+    position: absolute;
+    right: -26px;
 }

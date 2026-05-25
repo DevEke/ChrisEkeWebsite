@@ -1,48 +1,25 @@
 
-import { Icon } from "@tabler/icons-react";
+
 import styles from "./Button.module.css";
-import Link from "next/link";
 
-type ButtonProps = {
+type ButtonProps =
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {
     label: string;
-    Icon?: Icon;
-    buttonType: string;
-    type?: React.ButtonHTMLAttributes<HTMLButtonElement>["type"];
-    style?: React.CSSProperties;
     className?: string;
-    action?: () => void;
-    link?: boolean;
-    route?: string;
-}
+    style?: React.CSSProperties;
+  };
 
 
-export default function Button({label, Icon, style, action, type, buttonType, className, link, route}: ButtonProps) {
+export default function Button({ label, style, className, ...props }: ButtonProps) {
 
-    if (link && route) {
         return (
-            <div className={styles.buttonWrapper}>
-                <Link
-                    href={route}
-                    className={`${className} ${styles.button} ${buttonType === 'secondary' ? styles.buttonSecondary : styles.buttonPrimary}`}
+
+                <button
+                    className={`${styles.buttonWrapper} ${className}`}
                     style={style}
+                    {...props}
                 >
-                    <span>{label}</span>
-                    {Icon && <Icon size={15} /> }
-                </Link>
-            </div>
+                    <span className={styles.buttonLabel}>{label}</span>
+                </button>
         )
-    }
-    return (
-        <div className={styles.buttonWrapper}>
-            <button
-                onClick={action}
-                type={type}
-                className={`${className} ${styles.button} ${buttonType === 'secondary' ? styles.buttonSecondary : styles.buttonPrimary}`}
-                style={style}
-            >
-                <span>{label}</span>
-                {Icon && <Icon size={15} /> }
-            </button>
-        </div>
-    )
 }

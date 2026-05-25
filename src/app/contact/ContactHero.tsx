@@ -1,6 +1,6 @@
 import { Once } from "@/components/motion/Once";
 import { Stagger, OnceItem } from "@/components/motion/Stagger";
-import { ContactForm } from "./ContactForm";
+import { ContactForm } from "../Home/Contact/ContactForm";
 import { Tilt } from "@/components/motion/Tilt";
 import styles from "./page.module.css";
 

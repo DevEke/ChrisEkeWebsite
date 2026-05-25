@@ -1,0 +1,62 @@
+
+
+.aboutContents {
+    padding-block: 15%;
+    background-image: url('../../../../public/Group\ 417.png');
+    background-repeat: no-repeat;
+    background-size: 20vw;
+    background-position: 97% 100%;
+    margin: 0 auto;
+}
+
+
+.aboutContents p {
+    width: 55vw;
+}
+
+.aboutContents > p:first-of-type {
+    margin-bottom: 24px;
+    width: 70vw;
+}
+
+.aboutButton {
+    margin-top: 48px ;
+    background-image: url("../../../../public/btn-con-def.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+}
+
+.aboutButton:hover {
+    background-image: url("../../../../public/btn-con-hov.png");
+}
+
+
+/* Tablets */
+@media (min-width: 768px) {
+    .aboutWrapper {
+
+        gap: 48px;
+
+    }
+
+    .aboutContents {
+        width: var(--content-width);
+        padding-block: 120px;
+        padding-bottom: 180px;
+        background-repeat: no-repeat;
+        background-size: 30%;
+        background-position: 100% 90%;
+    }
+
+    .aboutContents p {
+        width: 65%;
+    }
+    .aboutContents > p:first-of-type {
+        margin-bottom: 24px;
+        width: 80%;
+    }
+
+
+
+ }

@@ -46,9 +46,10 @@ export function Stagger({
   );
 }
 
-type OnceItemProps = {
+type OnceItemProps<T extends React.ElementType = "div"> = {
   children: React.ReactNode;
   className?: string;
+  as?: T;
 };
 
 const itemVariants: Variants = {
@@ -62,7 +63,7 @@ const itemTransition: Transition = {
   duration: 0.6,
 };
 
-export function OnceItem({ children, className }: OnceItemProps) {
+export function OnceItem({ children, className, as }: OnceItemProps) {
   return (
     <motion.div className={className} variants={itemVariants} transition={itemTransition}>
       {children}

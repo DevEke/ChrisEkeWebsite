@@ -1,7 +1,7 @@
 import { Once } from "@/components/motion/Once";
 import { Stagger, OnceItem } from "@/components/motion/Stagger";
 import { Tilt } from "@/components/motion/Tilt";
-import FAQs from "./FAQs";
+import FAQs from "../Home/FAQ/FAQs";
 import styles from "./page.module.css";
 
 export default function ContactFAQ() {

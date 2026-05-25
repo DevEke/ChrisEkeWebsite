@@ -1,0 +1,81 @@
+.skillsWrapper {
+    padding-block: 120px;
+}
+
+.skillsContent {
+    width: 100%;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin: 48px 0;
+}
+
+.skillsFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.skillsFlex:hover .skillsNumber {
+    color: var(--brand);
+}
+
+.skillsNumber {
+    font-family: var(--font);
+    color: var(--muted-accent);
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 80%;
+    font-size: 48px;
+    width: 54px;
+    transition: color .2s ease;
+}
+
+
+.skillsNodeFlex {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-block: 15px;
+}
+
+
+/* Small tablets / large phones */
+@media (min-width: 640px) {
+    .skillsFlex {
+        flex-direction: row;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .skillsContent {
+        width: 70%;
+    }
+ }
+
+/* Small laptops / large tablets */
+@media (min-width: 1024px) {
+    .skillsContent {
+        width: 50%;
+    }
+ }
+
+/* Desktops */
+@media (min-width: 1280px) {
+    .skillsGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px 90px;
+        margin-block: 56px;
+    }
+    .skillsContent {
+        width: 40%;
+    }
+ }
+
+/* Large desktops */
+@media (min-width: 1536px) { }

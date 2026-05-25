@@ -1,0 +1,95 @@
+.hoverNodeContainer {
+    position: relative;
+    padding: 6px 15px 6px 12px;
+    background: var(--brand-accent);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    border-radius: 36px;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.hoverNodeDescription {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    border: 1px solid var(--border);
+    padding: 18px;
+    border-radius: 24px;
+    background: var(--background);
+    font-size: 15px;
+    width: 20vw;
+    top: calc(100% + 12px);
+    left: 50%;
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.hoverNodeDescription p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--muted);
+    margin: 0;
+    font-family: var(--font);
+}
+
+.hoverNodeContainer:hover {
+    background: var(--brand);
+}
+
+.hoverNodeContainer:hover .hoverNodeLabel,
+.hoverNodeContainer:hover .hoverNodeIcon {
+    color: var(--background);
+}
+
+.hoverNodeIcon {
+    color: var(--brand);
+}
+
+.hoverNodeLabel {
+    font-family: var(--font);
+    font-size: 12px;
+    color: var(--brand);
+    font-weight: 400;
+    transition: color .2s ease;
+}
+
+.nodeActive {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0px);
+    pointer-events: all;
+}
+
+.nodeInactive {
+    opacity: 0;
+    transform: translateX(-50%) translateY(12px);
+    pointer-events: none;
+}
+
+/* Small tablets / large phones */
+@media (min-width: 640px) {
+    .hoverNodeContainer {
+        padding: 9px 18px 9px 15px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .hoverNodeLabel {
+        font-size: 15px;
+    }
+}
+
+/* Small laptops / large tablets */
+@media (min-width: 1024px) {
+    .hoverNodeDescription {
+        display: block;
+    }
+ }
+
+/* Desktops */
+@media (min-width: 1280px) { }
+
+/* Large desktops */
+@media (min-width: 1536px) { }

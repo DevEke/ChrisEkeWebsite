@@ -1,0 +1,38 @@
+.nodeContainer {
+    padding: 6px 15px;
+    background: var(--brand-accent);
+    display: inline-block;
+    border-radius: 36px;
+}
+
+.nodeLabel {
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: 400;
+    color: var(--brand);
+    margin: 0;
+    font-family: var(--font);
+}
+
+/* Small tablets / large phones */
+@media (min-width: 640px) {
+    .nodeContainer {
+        padding: 9px 18px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .nodeLabel {
+        font-size: 15px;
+    }
+}
+
+/* Small laptops / large tablets */
+@media (min-width: 1024px) { }
+
+/* Desktops */
+@media (min-width: 1280px) { }
+
+/* Large desktops */
+@media (min-width: 1536px) { }

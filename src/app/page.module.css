@@ -1,7 +1,7 @@
-
-.heroButtons {
-  display: flex;
-  align-items: flex;
-  gap: var(--s-4);
-  margin-top: var(--s-9);
+.mainWrapper {
+  background-image: url("../../public/background-image.png"), url("../../public/background-image 2.png") ;
+  background-repeat: repeat-y, repeat-y;
+  background-size: 50%, 50%;
+  background-attachment: fixed;
+  background-position: 0 0, 100% 0;
 }

@@ -1,17 +1,22 @@
 
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
-import ParticlesBackdrop from "@/components/Particles"
+import { Walter_Turncoat, Swanky_and_Moo_Moo } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer"
 import Template from "./template";
 
-const font = Plus_Jakarta_Sans({
-  variable: "--font-style",
+const hFont = Walter_Turncoat({
+  variable: "--h-font",
+  weight: "400",
   subsets: ["latin"],
 });
 
-
+const pFont = Swanky_and_Moo_Moo({
+  variable: "--p-font",
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,12 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.variable}`} suppressHydrationWarning>
-        <ParticlesBackdrop />
-        <Header />
+      <body className={`${hFont.variable} ${pFont.variable}`} suppressHydrationWarning>
+        {/* <Header /> */}
         <Template>
             {children}
         </Template>
+        {/* <Footer /> */}
       </body>
     </html>
   );

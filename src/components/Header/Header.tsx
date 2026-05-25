@@ -1,10 +1,11 @@
 "use client"
 
 import Link from "next/link";
+import Button from "../Button/Button";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
-import { IconMenu3, IconX } from "@tabler/icons-react";
+import { IconMenu3, IconX, IconMessageCircleFilled, IconCircleFilled } from "@tabler/icons-react";
 import { useScrollLock } from "@/hooks/useScrollLock";
 
 
@@ -37,17 +38,24 @@ export default function Header() {
 
     return (
         <>
-        <header className={`wrapper ${styles.navWrapper}`} role="banner">
-            <nav className={`content ${styles.navContainer}`} aria-label="Primary">
-                <ul className={styles.navLinks}>
-                    <li><Link href="/" className={`${styles.navLink} ${pathname === "/" && styles.activeLink}`}><span>Home</span></Link></li>
-                    <li><Link href="/services" className={`${styles.navLink} ${pathname === "/services" && styles.activeLink}`}><span>Services</span></Link></li>
-                    <li><Link href="/work" className={`${styles.navLink} ${pathname === "/work" && styles.activeLink}`}><span>Work</span></Link></li>
-                    <li><Link href="/process" className={`${styles.navLink} ${pathname === "/process" && styles.activeLink}`}><span>Process</span></Link></li>
-                    <li><Link href="/about" className={`${styles.navLink} ${pathname === "/about" && styles.activeLink}`}><span>About</span></Link></li>
-                    <li><Link href="/contact" className={`${styles.navLink} ${pathname === "/contact" && styles.activeLink}`}><span>Contact</span></Link></li>
-                </ul>
+        <header className={`${styles.navWrapper} content`} role="banner">
+            <div className="site-logo logo-sm dark-logo"></div>
+            <nav className={styles.navContainer} aria-label="Primary">
+                <Link href="#about" className={styles.navLink}>About</Link>
+                <Link href="#services" className={styles.navLink}>Services</Link>
+                <Link href="#process" className={styles.navLink}>Process</Link>
+                <Link href="#skills" className={styles.navLink}>Skills</Link>
+                <Link href="#work" className={styles.navLink}>Work</Link>
+                <Link href="#faqs" className={styles.navLink}>FAQ</Link>
             </nav>
+            <Button
+                Icon={IconMessageCircleFilled}
+                label="Start a Project"
+                buttonType="primary"
+                link={true}
+                route="#contact"
+                className={styles.headerButton}
+            />
             {/* Mobile Button */}
             <button
                 type="button"
@@ -76,14 +84,15 @@ export default function Header() {
                     aria-label="Mobile Primary"
                     style={{ pointerEvents: open ? "auto" : "none" }}
                 >
-                    <ul className={`container ${styles.mobileInner}`}>
-                        <li><Link onClick={onNavClick} href="/" className={`${styles.navLink} ${pathname === "/" && styles.activeLink}`}><span>Home</span></Link></li>
-                        <li><Link onClick={onNavClick} href="/services" className={`${styles.navLink} ${pathname === "/services" && styles.activeLink}`}><span>Services</span></Link></li>
-                        <li><Link onClick={onNavClick} href="/work" className={`${styles.navLink} ${pathname === "/work" && styles.activeLink}`}><span>Work</span></Link></li>
-                        <li><Link onClick={onNavClick} href="/process" className={`${styles.navLink} ${pathname === "/process" && styles.activeLink}`}><span>Process</span></Link></li>
-                        <li><Link onClick={onNavClick} href="/about" className={`${styles.navLink} ${pathname === "/about" && styles.activeLink}`}><span>About</span></Link></li>
-                        <li><Link onClick={onNavClick} href="/contact" className={`${styles.navLink} ${pathname === "/contact" && styles.activeLink}`}><span>Contact</span></Link></li>
-                    </ul>
+                    <div className={`container ${styles.mobileInner}`}>
+                        <div className="sectionLabel">Menu</div>
+                        <Link href="#about" onClick={onNavClick} className={styles.mobileNavLink}>About</Link>
+                        <Link href="#services" onClick={onNavClick} className={styles.mobileNavLink}>Services</Link>
+                        <Link href="#process" onClick={onNavClick} className={styles.mobileNavLink}>Process</Link>
+                        <Link href="#skills" onClick={onNavClick} className={styles.mobileNavLink}>Skills</Link>
+                        <Link href="#work" onClick={onNavClick} className={styles.mobileNavLink}>Work</Link>
+                        <Link href="#faqs" onClick={onNavClick} className={styles.mobileNavLink}>FAQ</Link>
+                    </div>
                 </nav>
             </>
         </>
