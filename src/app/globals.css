@@ -77,12 +77,6 @@ html {
 .content {
   width: calc(100% - 48px);
   margin: 0 auto;
-  background: linear-gradient( to right,
-  rgba(255, 255, 255, 0) 0%,
-  rgba(255, 255, 255, 1) 35%,
-  rgba(255, 255, 255, 1) 65%,
-  rgba(255, 255, 255, 0) 100%
-);
 }
 
 .alternate-background {
