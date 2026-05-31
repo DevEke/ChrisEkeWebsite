@@ -29,12 +29,13 @@ export default function Work() {
       };
 
     return (
-        <Once id="work" className="section ">
+        <Once id="work">
             <div className={`content ${styles.workWrapper}`}>
                 <div className={styles.workContent}>
                     <WorkItem
-                        title={currWork.title}
-                        body={currWork.body}
+                        brand={currWork.brand}
+                        description={currWork.description}
+                        industry={currWork.industry}
                         image={currWork.image}
                         link={currWork.link}
                     />

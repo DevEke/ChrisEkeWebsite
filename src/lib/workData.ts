@@ -3,22 +3,25 @@ import wrk1 from "./../../public/image 2.png"
 import wrk2 from "./../../public/image 4.png"
 
 export type WorkProps = {
-    title: string;
-    body: string;
+    brand: string;
+    description: string;
+    industry: string;
     image: StaticImageData
     link: string;
 }
 
 export const workData: Record<string, WorkProps> = {
     0: {
-        title: "Fade House - Barbershop website",
-        body: "For Fade House, I created a full visual and digital presence from concept to launch. Deliverables included brand identity, logo design, UI/UX design, and front-end website development. The final product is a fully responsive experience designed to showcase services, strengthen brand recognition, and create a consistent experience across desktop, tablet, and mobile.",
+        brand: "Fade House",
+        description: "Fade House is a fictional Dallas-based barbershop. I designed a full visual and digital presence from concept to launch to create a fully responsive experience to strengthen brand recognition and create a consistent online presence.",
+        industry: "barbershop",
         image: wrk1,
         link: "https://fade-house-weld.vercel.app/"
     },
     1: {
-        title: "Alicia Carter Realty - Realtor Guidance website",
-        body: "Designed and developed a complete digital identity for Alicia Carter Realty, including brand direction, logo design, and a fully custom responsive website. The experience was crafted to establish trust, elevate the brand’s professional presence, and clearly communicate real estate services through a polished, intuitive interface optimized for desktop, tablet, and mobile.",
+        brand: "Alicia Carter Realty",
+        description: "Alicia Carter Realty was a complete digital identity redesign from the ground up. The new experience was crafted to establish trust, elevate the brand’s professional presence, and clearly communicate real estate services.",
+        industry: "realty",
         image: wrk2,
         link: "https://alicia-carter-realty.vercel.app/"
     }

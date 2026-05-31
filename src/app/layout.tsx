@@ -1,16 +1,15 @@
 
 import type { Metadata } from "next";
-import { Walter_Turncoat, Swanky_and_Moo_Moo } from "next/font/google";
+import { Gabarito, Swanky_and_Moo_Moo } from "next/font/google";
 import "./globals.css";
-import Template from "./template";
 
-const hFont = Walter_Turncoat({
+const hFont = Gabarito({
   variable: "--h-font",
   weight: "400",
   subsets: ["latin"],
 });
 
-const pFont = Swanky_and_Moo_Moo({
+const pFont = Gabarito({
   variable: "--p-font",
   weight: "400",
   subsets: ["latin"],
@@ -29,9 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${hFont.variable} ${pFont.variable}`} suppressHydrationWarning>
-        <Template>
+        <main>
             {children}
-        </Template>
+        </main>
       </body>
     </html>
   );

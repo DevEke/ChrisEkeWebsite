@@ -1,64 +1,28 @@
+.heroWrapper {
 
+}
 
 .heroContent {
-    display: flex;
-    padding-block: 15%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    text-align: right;
-    margin: auto;
-    background-image: url('../../../../public/hero_img.png');
-    background-repeat: no-repeat;
-    background-size: 27vw;
-    background-position: 3% 270px;
+    text-align: center;
+    padding: 36px;
+    padding-top: 60px;
+
+}
+
+.heroImage {
+    width: 60%;
+    display: block;
+    margin: 48px auto;
+    height: auto
 }
 
 
-.heroContent h1 {
-    width: 75vw;
-}
-
-.heroContent p {
-    width: 55vw;
-}
-
-.heroLogo {
-    margin-bottom:36px;
-}
-
-.heroButton {
-    margin-top: 48px ;
-    background-image: url("../../../../public/btn-smw-def.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50% 50%;
-}
-
-.heroButton:hover {
-    background-image: url("../../../../public/btn-smw-hov.png");
+.heroButton{
+    margin-top:24px;
 }
 
 /* Tablets */
 @media (min-width: 768px) {
 
-    .heroContent {
-        padding-block: 120px;
-        padding-bottom: 300px;
-        width: var(--content-width);
-        text-align: right;
-        align-items: flex-end;
-        background-position: 0% 100%;
-        background-size: 50%;
-    }
-    .heroContent h1 {
-        width: 80%;
-    }
 
-    .heroContent p {
-        width: 50%;
-    }
-    .heroButton {
-        margin-top: 48px ;
-    }
  }

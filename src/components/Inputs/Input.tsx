@@ -35,17 +35,16 @@ export default function Input<TFieldValues extends FieldValues>({
                 <label className={styles.formLabel} htmlFor={id}>{label}</label>
                 <textarea
                     className={`${styles.formTextArea} ${error && styles.inputError}`}
+                    placeholder={placeholder}
                     id={id}
                     rows={5}
                     {...register(id)}
                 />
                 {
                     error && (
-                        // <div className={styles.inputErrorContainer} role="alert">
-                        //     <IconAlertCircle stroke={2.5} size={15} />
-                        //     <span>{error.message}</span>
-                        // </div>
-                        <Image src={err} className={styles.errImage} alt="" />
+                        <div className={styles.inputErrorContainer} role="alert">
+                            <span>{error.message}</span>
+                        </div>
                     )
                 }
             </div>
@@ -72,11 +71,10 @@ export default function Input<TFieldValues extends FieldValues>({
                 <IconChevronDown  size={15} className={styles.selectChevron}/>
                 {
                     error && (
-                        // <div className={styles.inputErrorContainer} role="alert">
-                        //     <IconAlertCircle stroke={2.5} size={15} />
-                        //     <span>{error.message}</span>
-                        // </div>
-                        <Image src={err} className={styles.errImage} alt="" />
+                        <div className={styles.inputErrorContainer} role="alert">
+                            <span>{error.message}</span>
+                        </div>
+
                     )
                 }
             </div>
@@ -95,14 +93,13 @@ export default function Input<TFieldValues extends FieldValues>({
                 inputMode={inputMode}
                 {...register(id)}
                 tabIndex={tabIndex}
+                placeholder={placeholder}
             />
             {
                 error && (
-                    // <div className={styles.inputErrorContainer} role="alert">
-                    //     <IconAlertCircle  stroke={2.5} size={15} />
-                    //     <span>{error.message}</span>
-                    // </div>
-                    <Image src={err} className={styles.errImage} alt="" />
+                    <div className={styles.inputErrorContainer} role="alert">
+                        <span>{error.message}</span>
+                    </div>
                 )
             }
         </div>

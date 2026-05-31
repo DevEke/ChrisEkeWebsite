@@ -1,8 +1,8 @@
 .formInputContainer {
     display: flex;
     flex-direction: column;
-    position: relative;
-    background-repeat: no-repeat;
+    gap: 6px;
+    margin-bottom: 6px;
 }
 
 
@@ -23,13 +23,11 @@
 .formSelect,
 .formTextArea
  {
-    padding: 30px 18px 0px 18px;
+    padding: 12px 18px;
     font-family: var(--p-font);
-    color: var(--muted);
-    height: 100%;
+    color: var(--black);
     font-size: 18px;
-    background: none;
-    border: none;
+    border: 1px solid black;
     cursor: pointer;
     transition:
         background .2s ease,
@@ -47,7 +45,7 @@
 
 .formInput::placeholder,
 .formTextArea::placeholder {
-    color: var(--muted)
+    color: var(--black)
 }
 
 
@@ -60,24 +58,14 @@
 
 
 .formTextArea {
-    padding: 34px 18px 0px 18px;
     resize: none;
 }
 
 .inputErrorContainer {
-    position: absolute;
     color: var(--error);
-    display: flex;
-    gap: 6px;
     align-items: center;
-    bottom: -24px;
+    text-align: right;
     font-family: var(--p-font);
     font-weight: 500;
-    font-size: 15px;
-    right: 0;
-}
-
-.errImage {
-    position: absolute;
-    right: -26px;
+    font-size: 12px;
 }

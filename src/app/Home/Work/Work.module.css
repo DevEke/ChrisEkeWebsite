@@ -1,17 +1,17 @@
-.workContent {
-    margin: 0 auto;
-    padding-block: 15%;
+.workWrapper {
+    margin-bottom: 72px;
 }
 
-.workContent p {
-    width: 90%;
+.workContent {
+
+padding: 36px;
 }
+
 
 .workImage {
-    width: 100%;
+    width: calc(100% + 36px);
     height: auto;
-    border-radius: 6px;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
 }
 
 .workControls {
@@ -20,37 +20,7 @@
     justify-content: space-between;
 }
 
-.nextButton {
-    background-image: url("../../../../public/wrk-next-def.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 100% 50%;
-}
-
-.nextButton:hover {
-    background-image: url("../../../../public/wrk-next-hov.png");
-}
-
-.prevButton {
-    background-image: url("../../../../public/wrk-prev-def.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0% 50%;
-}
-
-.prevButton:hover {
-    background-image: url("../../../../public/wrk-prev-hov.png");
-}
 
 @media (min-width: 768px) {
-    .workContent {
-        width: var(--content-width);
-        margin: 0 auto;
-        padding-block: 5%;
-    }
 
-    .workImage {
-        border-radius: 6px;
-        margin-bottom: 24px;
-    }
 }

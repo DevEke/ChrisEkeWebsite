@@ -117,9 +117,9 @@ export function ContactForm() {
                 />
                 <Input<ContactFormValues>
                     id="message"
-                    label="What are you looking to build?"
+                    label="Message"
                     type="textarea"
-                    placeholder="What are you looking to build?"
+                    placeholder="How can I help you?"
                     register={register}
                     error={errors.message}
                     className={styles.messageInput}

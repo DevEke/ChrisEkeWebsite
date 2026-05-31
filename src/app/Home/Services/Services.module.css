@@ -1,82 +1,31 @@
 .servicesContent {
-    padding-block: 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.servicesContent h2 {
+    padding: 36px;
     text-align: center;
 }
 
-.servicesContent > p:first-of-type {
-    text-align: center;
-    width: 65%;
-    margin-bottom: 48px;
-}
 
 .servicesGrid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 60px;
-    place-items: center;
+    margin: 24px 0;
+    gap: 24px;
 }
 
 
 .serviceItemWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 18px;
+
 }
 
 
 .serviceItemImage {
-    width: 100px;
-    height: 100px;
-
+    height: 48px;
+    aspect-ratio: 1;
+    background: black;
+    margin: 12px auto;
 }
 
 
 /* Tablets */
 @media (min-width: 768px) {
-    .servicesContent {
-        padding-block: 5%;
-        width: var(--content-width);
-    }
 
-    .servicesContent h2 {
-        align-self: flex-end;
-        text-align: right;
-    }
-    .servicesContent > p:first-of-type {
-        align-self: flex-end;
-        text-align: right;
-        width: 60%;
-    }
-
-    .serviceItemWrapper {
-        gap: 24px;
-    }
-
-    .serviceItemWrapper {
-        gap: 24px;
-    }
-
-
-    .serviceKey:nth-child(odd)  {
-        position: relative;
-        bottom: 190px;
-        align-content: flex-end;
-        text-align: right;
-    }
-
-
-    .servicesGrid {
-        margin: 60px auto 0 auto;
-        grid-template-columns: 1fr 1fr;
-        gap: 6S0px 60px;
-    }
  }

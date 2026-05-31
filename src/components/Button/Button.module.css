@@ -1,45 +1,19 @@
 .buttonWrapper {
     display: inline-block;
     cursor: pointer;
-    background-color: white;
-    height: 60px;
-    width: 175px;
+    background: black;
+    color: white;
     border: none;
-    position: relative;
-    top: 0;
-
+    padding: 12px 21px;
+    border-radius: 6px;
 }
 
-.buttonWrapper:hover {
-    top: 6px;
-}
-
-.button {
-    display: flex;
-    align-items: center;
-    padding: 24px;
-    border: none;
-    border-radius: 24px;
-    gap: 9px;
-    text-decoration: none;
-    cursor: pointer;
-
-}
-
-.contactButton {
-    display: flex;
-    align-items: center;
-    padding: 15px 25px 21px 25px;
-    border: none;
-    cursor: pointer;
-}
 
 .buttonLabel {
-    font-size: 18px;
+    font-size: 15px;
     font-family: var(--h-font);
     line-height: 100%;
     font-weight: 600;
-    opacity: 0;
 }
 
 .buttonIcon {
