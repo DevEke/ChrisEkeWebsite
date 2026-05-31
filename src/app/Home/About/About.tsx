@@ -9,7 +9,7 @@ export default function About() {
         <section id="about">
             <div className={`content ${styles.aboutWrapper}`}>
                 <div className={styles.aboutContent}>
-                    <h2 className="h2">Chris Eke</h2>
+                    <h2 className="h2">I'm Chris Eke</h2>
                     <p className="p1">I build and design websites, logos, and brand identities. My clients need well-built websites and meaningful identities to communicate their brands effectivley. </p>
                     <p className="p1">"If it looks great, it should work better."</p>
                     <Button

@@ -7,9 +7,9 @@ import Link from "next/link";
 export default function WorkItem({ brand, industry, description, image, link }: WorkProps) {
     return (
         <div>
-            <Link href={link} target="_blank">
+            {/* <Link href={link} target="_blank">
             <Image src={image} alt="" className={styles.workImage} />
-            </Link>
+            </Link> */}
             <h3 className="h3">{brand}</h3>
             <p className="p1">{description}</p>
         </div>

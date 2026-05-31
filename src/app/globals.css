@@ -1,9 +1,9 @@
 :root {
-  --black: #0d0d0b;
-  --muted: #000000;
+  --black: #303030;
+  --muted: #303030d;
   --muted-accent: #e2e2df;
-  --brand: #6D1EAD;
-  --brand-accent: #E7F1E9;
+  --brand: #4a4a4a;
+  --brand-accent: #F4F4F4;
   --border: #E4E4DF;
   --accent: #F0F0EB;
   --background: #FFFFFF;
@@ -22,8 +22,7 @@
 }
 
 html, body {
-  background: var(--background);
-  background: red;
+
 }
 
 html {
@@ -42,6 +41,7 @@ main {
 .site-logo {
   aspect-ratio: 1;
   border-radius: 100%;
+  opacity: 0;
 }
 
 .logo-lg {
@@ -61,7 +61,7 @@ main {
 }
 
 .dark-logo {
-  background: var(--black);
+  background: var(--brand);
 }
 
 .fade-in,
@@ -98,9 +98,15 @@ main {
   font-weight: 400;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--p-font);
+}
+
 .h1 {
   font-size: 33px;
-  color: var(--black);
+  color: var(--brand);
   font-family: var(--h-font);
   margin-bottom: 12px;
   line-height: 100%;
@@ -110,15 +116,16 @@ main {
 .h2 {
   font-size: 27px;
   line-height: 90%;
-  color: var(--black);
+  color: var(--brand);
   font-family: var(--h-font);
   margin-bottom: 12px;
+
   font-weight: 700;
 }
 
 .h3 {
   font-size: 21px;
-  color: var(--black);
+  color: var(--brand);
   font-family: var(--h-font);
   margin-bottom: 12px;
   font-weight: 700;
@@ -128,7 +135,7 @@ main {
   font-size: 15px;
 
   line-height: 100%;
-  color: var(--black);
+  color: var(--brand);
   font-family: var(--h-font);
   margin-bottom: 6px;
   font-weight: 700;
@@ -138,7 +145,7 @@ main {
   font-size: 18px;
   line-height: 130%;
   margin-bottom: 12px;
-  color: var(--black);
+  color: var(--brand);
   font-family: var(--p-font);
 }
 
@@ -146,7 +153,7 @@ main {
   font-size: 18px;
   line-height: 130%;
   margin-bottom: 3px;
-  color: var(--muted);
+  color: var(--brand);
   font-family: var(--p-font);
 }
 

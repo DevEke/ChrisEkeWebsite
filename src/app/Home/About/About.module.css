@@ -1,10 +1,11 @@
 
 .aboutWrapper {
-    margin-bottom: 72px;
+    padding: 48px 0;
 }
 
 .aboutContent {
-padding: 36px;
+padding: 0 18px;
+text-align: center;
 }
 
 .aboutButton {

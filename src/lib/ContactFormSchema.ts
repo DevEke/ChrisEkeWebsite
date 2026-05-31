@@ -12,7 +12,7 @@ export const contactFormSchema = z.object({
     message: z
         .string()
         .trim()
-        .min(1, "Please your project details so I know how to help."),
+        .min(1, "This field cannot be blank."),
 
     // Honeypot
     organization: z

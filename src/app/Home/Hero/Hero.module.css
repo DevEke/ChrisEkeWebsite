@@ -1,19 +1,29 @@
 .heroWrapper {
-
+    padding: 48px 0;
 }
 
 .heroContent {
     text-align: center;
-    padding: 36px;
-    padding-top: 60px;
+    padding: 0 18px;
+    position: relative;
 
 }
 
+.heroLogo {
+    height: 36px;
+    aspect-ratio: 1;
+    background: var(--brand);
+    margin: 24px auto;
+    border-radius: 36px;
+}
+
 .heroImage {
-    width: 60%;
+    position: relative;
+    left: -60px;
+    width: calc(100% + 120px);
     display: block;
-    margin: 48px auto;
-    height: auto
+    height: auto;
+    margin-top: 72px;
 }
 
 

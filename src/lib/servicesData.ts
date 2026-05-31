@@ -1,9 +1,9 @@
 import { StaticImageData } from "next/image";
-import seo from "./../../public/svc-seo.png"
-import dev from "./../../public/svc-dev.png"
-import db from "./../../public/svc-db.png"
-import logo from "./../../public/svc-logo.png"
-import ai from "./../../public/svc-ai.png"
+import seo from "./../../public/graphic-performance.png"
+import dev from "./../../public/graphic-dev.png"
+import db from "./../../public/graphic-db.png"
+import logo from "./../../public/graphic-design.png"
+import ai from "./../../public/graphic-ai.png"
 import comp from "./../../public/CE - Computer 1.png"
 
 type ServiceProps = {

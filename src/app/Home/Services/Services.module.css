@@ -1,5 +1,9 @@
+
+.servicesWrapper {
+    padding: 48px 0;
+}
 .servicesContent {
-    padding: 36px;
+    padding: 0 18px;
     text-align: center;
 }
 
@@ -18,9 +22,8 @@
 
 
 .serviceItemImage {
-    height: 48px;
-    aspect-ratio: 1;
-    background: black;
+    height: 60px;
+    width: auto;
     margin: 12px auto;
 }
 

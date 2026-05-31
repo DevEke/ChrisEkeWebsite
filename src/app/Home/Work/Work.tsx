@@ -7,6 +7,7 @@ import styles from "./Work.module.css";
 import Button from "@/components/Button/Button";
 import { workData } from "@/lib/workData";
 import WorkItem from "./WorkItem";
+import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 
 export default function Work() {
     const [curr, setCurr] = useState(0);
@@ -41,16 +42,12 @@ export default function Work() {
                     />
 
                     <div className={styles.workControls}>
-                        <Button
-                            className={styles.prevButton}
-                            label="Previous"
-                            onClick={prev}
-                        />
-                        <Button
-                            className={styles.nextButton}
-                            label="Next"
-                            onClick={next}
-                        />
+                        <button className={styles.workButton} onClick={prev} >
+                            <IconChevronLeft />
+                        </button>
+                        <button  className={styles.workButton}  onClick={next} >
+                            <IconChevronRight/>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -27,7 +27,9 @@
     font-family: var(--p-font);
     color: var(--black);
     font-size: 18px;
-    border: 1px solid black;
+    border: none;
+    border-radius: 3px;
+    background: #F4F4F4;
     cursor: pointer;
     transition:
         background .2s ease,
@@ -41,6 +43,7 @@
 .formSelect:focus,
 .formTextArea:focus {
     outline: transparent;
+    background: #e2e2e2;
 }
 
 .formInput::placeholder,

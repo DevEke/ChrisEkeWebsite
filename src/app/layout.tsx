@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Gabarito, Swanky_and_Moo_Moo } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header/Header";
 
 const hFont = Gabarito({
   variable: "--h-font",
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${hFont.variable} ${pFont.variable}`} suppressHydrationWarning>
+        <Header />
         <main>
             {children}
         </main>

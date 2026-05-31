@@ -1,16 +1,18 @@
 .buttonWrapper {
     display: inline-block;
     cursor: pointer;
-    background: black;
+    background: var(--brand);
+    text-transform: uppercase;
     color: white;
     border: none;
     padding: 12px 21px;
-    border-radius: 6px;
+    border-radius: 3px;
 }
 
 
 .buttonLabel {
-    font-size: 15px;
+    font-size: 12px;
+    letter-spacing: 3px;
     font-family: var(--h-font);
     line-height: 100%;
     font-weight: 600;

@@ -39,30 +39,32 @@ export default function Header() {
     return (
         <>
         <header className={`${styles.navWrapper} content`} role="banner">
-            <div className="site-logo logo-sm dark-logo"></div>
-            <nav className={styles.navContainer} aria-label="Primary">
-                <Link href="#about" className={styles.navLink}>About</Link>
-                <Link href="#services" className={styles.navLink}>Services</Link>
-                <Link href="#process" className={styles.navLink}>Process</Link>
-                <Link href="#skills" className={styles.navLink}>Skills</Link>
-                <Link href="#work" className={styles.navLink}>Work</Link>
-                <Link href="#faqs" className={styles.navLink}>FAQ</Link>
-            </nav>
-            <Button
-                label="Start a Project"
-                className={styles.headerButton}
-            />
-            {/* Mobile Button */}
-            <button
-                type="button"
-                className={styles.mobileMenuButton}
-                aria-label="Open menu"
-                aria-expanded={open}
-                aria-controls="mobile-menu"
-                onClick={() => setOpen((v) => !v)}
-            >
-                { open ? <IconX aria-hidden size={30} stroke={1.5} /> : <IconMenu3 size={30} stroke={1.5} aria-hidden /> }
-            </button>
+            <div className={styles.navContent}>
+                <div className="site-logo logo-sm dark-logo"></div>
+                <nav className={styles.navContainer} aria-label="Primary">
+                    <Link href="#about" className={styles.navLink}>About</Link>
+                    <Link href="#services" className={styles.navLink}>Services</Link>
+                    <Link href="#process" className={styles.navLink}>Process</Link>
+                    <Link href="#skills" className={styles.navLink}>Skills</Link>
+                    <Link href="#work" className={styles.navLink}>Work</Link>
+                    <Link href="#faqs" className={styles.navLink}>FAQ</Link>
+                </nav>
+                <Button
+                    label="Start a Project"
+                    className={styles.headerButton}
+                />
+                {/* Mobile Button */}
+                <button
+                    type="button"
+                    className={styles.mobileMenuButton}
+                    aria-label="Open menu"
+                    aria-expanded={open}
+                    aria-controls="mobile-menu"
+                    onClick={() => setOpen((v) => !v)}
+                >
+                    { open ? <IconX aria-hidden size={30} stroke={1.5} /> : <IconMenu3 size={30} stroke={1.5} aria-hidden /> }
+                </button>
+            </div>
 
         </header>
         {/* Mobile Menu Panel */}
@@ -81,13 +83,10 @@ export default function Header() {
                     style={{ pointerEvents: open ? "auto" : "none" }}
                 >
                     <div className={`container ${styles.mobileInner}`}>
-                        <div className="sectionLabel">Menu</div>
                         <Link href="#about" onClick={onNavClick} className={styles.mobileNavLink}>About</Link>
                         <Link href="#services" onClick={onNavClick} className={styles.mobileNavLink}>Services</Link>
-                        <Link href="#process" onClick={onNavClick} className={styles.mobileNavLink}>Process</Link>
-                        <Link href="#skills" onClick={onNavClick} className={styles.mobileNavLink}>Skills</Link>
                         <Link href="#work" onClick={onNavClick} className={styles.mobileNavLink}>Work</Link>
-                        <Link href="#faqs" onClick={onNavClick} className={styles.mobileNavLink}>FAQ</Link>
+                        <Link href="#contact" onClick={onNavClick} className={styles.mobileNavLink}>FAQ</Link>
                     </div>
                 </nav>
             </>

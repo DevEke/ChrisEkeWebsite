@@ -1,15 +1,14 @@
 .navWrapper {
-    height: 72px;
+    padding: 12px 0;
+}
+
+.navContent {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--background);
+    padding: 0 18px;
 }
 
-.navLogo {
-    font-family: var(--font);
-    color: var(--black);
-}
 
 .navContainer {
     display: none;
@@ -18,18 +17,18 @@
 }
 
 .navLink {
-    color: var(--muted);
+    color: var(--brand);
     font-size: 15px;
     transition: color .2s ease;
-    font-family: var(--font);
+    font-family: var(--p-font);
     text-decoration: none;
 }
 
 .mobileNavLink {
-    color: var(--muted);
+    color: var(--brand);
     font-size: 18px;
     transition: color .2s ease;
-    font-family: var(--font);
+    font-family: var(--p-font);
     text-decoration: none;
 }
 
@@ -42,12 +41,14 @@
 }
 
 .mobileMenuButton {
+    position: relative;
+    z-index: 1000;
     display: block;
     background: transparent;
     border: none;
     width: 30px;
     height: 30px;
-    color: var(--black);
+    color: var(--brand);
     align-items: center;
     justify-content: center;
 }
@@ -72,12 +73,10 @@
 
   .navMobile {
     position: fixed;
-    padding: 36px;
+    padding: 24px 18px 48px 24px;
     border: 1px solid var(--border);
-    border-radius: 24px;
-    top: 72px;
-    right: 24;
-    width: 50%;
+top: 0;
+    width: 100%;
     z-index: 999;
     -webkit-overflow-scrolling: touch;
     background: var(--background);
