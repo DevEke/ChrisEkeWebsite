@@ -4,7 +4,7 @@ import { WorkProps } from "@/lib/workData";
 import Link from "next/link";
 
 
-export default function WorkItem({ brand, industry, description, image, link }: WorkProps) {
+export default function WorkItem({ brand, industry, description, link }: WorkProps) {
     return (
         <div>
             {/* <Link href={link} target="_blank">
