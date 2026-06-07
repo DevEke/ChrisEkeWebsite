@@ -1,6 +1,7 @@
 
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Gabarito, Swanky_and_Moo_Moo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
@@ -35,6 +36,7 @@ export default function RootLayout({
             {children}
         </main>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
