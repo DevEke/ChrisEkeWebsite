@@ -11,7 +11,7 @@ type ItemProps = {
 export default function ServiceItem({ id, image, title, description }: ItemProps) {
     return (
         <div className={styles.serviceItemWrapper}>
-            <Image src={image} alt={title} className={styles.serviceItemImage} />
+            <div className="img-placeholder"></div>
             <h3 className="h3">{title}</h3>
             <p className="p1">{description}</p>
         </div>

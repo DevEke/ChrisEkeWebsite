@@ -38,11 +38,15 @@ main {
 
 
 
-.site-logo {
-  aspect-ratio: 1;
-  border-radius: 100%;
-  opacity: 0;
+
+.img-placeholder {
+    height: 48px;
+    aspect-ratio: 1;
+    background: var(--brand);
+    margin: 24px auto;
+    border-radius: 36px;
 }
+
 
 .logo-lg {
   height: 72px;
@@ -108,17 +112,15 @@ a {
   font-size: 33px;
   color: var(--brand);
   font-family: var(--h-font);
-  margin-bottom: 12px;
-  line-height: 100%;
+  margin-bottom: 6px;
   font-weight: 900;
 }
 
 .h2 {
   font-size: 27px;
-  line-height: 90%;
   color: var(--brand);
   font-family: var(--h-font);
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 
   font-weight: 700;
 }
@@ -127,7 +129,7 @@ a {
   font-size: 21px;
   color: var(--brand);
   font-family: var(--h-font);
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   font-weight: 700;
 }
 

@@ -6,14 +6,13 @@ import Work from "./Home/Work/Work";
 import Skills from "./Home/Skills/Skills";
 import Contact from "./Home/Contact/Contact";
 import FAQ from "./Home/FAQ/FAQ";
-import styles from "./page.module.css";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <About />
-      <Work />
+      {/* <About /> */}
+      {/* <Work /> */}
       <Services />
       <Contact />
     </>

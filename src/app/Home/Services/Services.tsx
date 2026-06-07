@@ -10,21 +10,15 @@ export default function Services() {
         <section id="services">
             <div className={`content ${styles.servicesWrapper}`}>
                 <div className={styles.servicesContent}>
-                    <h2 className="h2">Here is what I offer</h2>
-                    <p className="p1">Thoughtful design. Modern development. Strategic execution. I build websites, apps, and digital experiences that balance aesthetics with performance.</p>
+                    <h2 className="h2">Designed With Purpose.<br/> Built With Care.</h2>
+                    <p className="p1">Your online presence should feel intentional in how it looks, works, and gets found. I build clean, reliable digital foundations through design, development, SEO, and branding.</p>
                     <div className={styles.servicesGrid}>
                         {
-                            [0,1,2,3,4,5].map((item, x) => {
-                                if (item === 2) {
-                                    // return <Image key={x} src={servicesData[item].image} alt="comp" />
-                                    return null
-
-                                }
-
+                          Object.keys(servicesData).map((item, x) => {
                                 return (
                                     <ServiceItem
                                         key={x}
-                                        id="01"
+                                        id={servicesData[item].toString()}
                                         image={servicesData[item].image}
                                         title={servicesData[item].title}
                                         description={servicesData[item].body}
